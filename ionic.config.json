@@ -1,0 +1,7 @@
+{
+  "name": "infordapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

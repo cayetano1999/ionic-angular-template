@@ -1,0 +1,18 @@
+export enum RoutesApp{
+    ONBOARDING = '/onboarding',
+    LOGIN = '/login',
+    REGISTER = '/register',
+    FORGOT_PASSWORD = '/forgot-password',
+    PRODUCTS = '/products',
+    PRODUCT_DETAIL = '/product-detail',
+    CART = '/cart',
+    CHECKOUT = '/checkout',
+    ORDERS = '/orders',
+    ORDER_DETAIL = '/order-detail',
+    PROFILE = '/profile',
+    FORCE_UPDATE = '/force-update',
+    NOT_FOUND = '/not-found',
+    NO_INTERNET = '/no-internet',
+    APP_MAINTENANCE = '/maintenance',
+    HOME = '/home',
+}

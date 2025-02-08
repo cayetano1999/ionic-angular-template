@@ -1,0 +1,29 @@
+.custom-modal-force-update {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    left: 50%;
+}
+
+.header-title{
+    font-family: 'aptops' sans-serif;
+    color: black;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: none;
+}
+
+.text-description {
+    color: black;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+
+.btn-update{
+    --border-radius: 40px;
+}

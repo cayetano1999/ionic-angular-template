@@ -1,0 +1,29 @@
+
+  
+  ion-modal {
+    --width: auto;
+    --height: auto;
+    --min-height: auto;
+    --max-height: 80%;
+    --top: 50%;
+    --left: 50%;
+    transform: translate(-50%, -50%);
+    --background: #00000087; 
+  }
+
+  .animated-image {
+
+    animation: moveAndRotate 2s infinite;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .logo-i-size {
+    width: 20px;
+  }

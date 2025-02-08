@@ -1,0 +1,205 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+@import url("./assets/css/bootstrap.min.css");
+@import url("./assets/css/animations.css");
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+// @import "@ionic/angular/css/palettes/dark.system.css";
+
+@font-face {
+  font-family: "aharoni";
+  src: url("./assets/fonts/Aharoni2/AharoniBold/AharoniBold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "aptops";
+  src: url("./assets/fonts/Aptops/Aptos-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "samsung";
+  src: url("./assets/fonts/One\ UI\ 6.ttf") format("truetype");
+}
+
+
+//Animations
+@keyframes moveAndRotate {
+      100% {
+        transform: translateX(0) translateY(0) rotate(360deg); /* Rotación completa */
+      }
+  }
+
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0); /* Posición inicial */
+  }
+  50% {
+    transform: translateY(2px); /* Mueve hacia abajo */
+  }
+}
+
+ion-content, ion-card, ion-item, ion-label, b {
+  font-family: 'samsung';
+}
+
+//Modals
+.custom-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  max-height: 80%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-modal-calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  max-height: 80%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-modal-force {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  max-height: 80%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.backdrop-modal {
+  --background: #00000087 !important;
+}
+
+.aharoni {
+  font-family: "aharoni", sans-serif;
+}
+
+.aptops {
+  font-family: "aptops", sans-serif;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-content-left {
+  display: flex;
+  justify-content: left;
+  align-items:start;
+}
+
+.body {
+  font-family: "aharoni" !important;
+}
+
+ion-avatar{
+  --border-radius: 0%!important
+}
+
+
+.item-title {
+  font-size: 16px;
+  font-weight: 900;
+  font-family: 'aptops' sans-serif;
+  color: black;
+  text-transform: none;
+}
+
+.item-desc {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'aptops' sans-serif;
+  color: black;
+}
+
+
+textarea{
+  height: 200px!important;
+}
+
+ion-card-subtitle {
+  text-transform: none;
+}
+
+ion-button {
+  max-width: 1000px;
+}
+
+ion-searchbar::part(icon) {
+  font-size: 50px; /* Cambia el tamaño según sea necesario */
+  width: 1.825rem;
+}
+
+/* Cambiar el tamaño del ícono "X" (botón de limpiar) */
+.searchbar-clear-icon {
+  font-size: 50px; /* Cambia el tamaño según sea necesario */
+  width: 1.825rem!important;
+
+}

@@ -1,0 +1,11 @@
+{
+    "/infordback": {
+      "target": "http://35.202.111.227",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/infordback": ""
+      }
+    }
+  }
+  

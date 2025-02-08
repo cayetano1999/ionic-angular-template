@@ -1,0 +1,5 @@
+export enum OPTION_TYPES {
+    INTERNAL = "INTERNAL",
+    EXTERNAL = "EXTERNAL",
+    IFRAME = "IFRAME",
+}

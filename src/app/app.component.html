@@ -1,0 +1,29 @@
+<ion-app>
+  <ion-split-pane contentId="main-content" >
+    <ion-menu contentId="main-content" type="overlay" *ngIf="availableMenu">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <img src="../assets/img/logodefault.png" style="width: 50px; margin-left: 13px;" alt="">
+          <ion-list-header>Ionic Template</ion-list-header>
+          <ion-note>Ionic - Angular - Capacitor</ion-note>
+          <hr>
+          <ion-menu-toggle auto-hide="false" *ngFor="let option of menuOptions; let i = index">
+            <ion-item *ngIf="option.menu" routerDirection="root" (click)="handleItemSelected(option)" lines="none" detail="false" routerLinkActive="selected">
+               <ion-avatar slot="start" style="width: 30px; height: 30px;">
+                <img id="img-avatar" [src]="option?.image | imageLoader" />
+               </ion-avatar>
+              <ion-label><b>{{ option.title }}</b></ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+
+      <ion-footer class="ion-no-border mb-5">
+        <ion-toolbar>
+          <ion-title>v{{version}} </ion-title>
+        </ion-toolbar>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
