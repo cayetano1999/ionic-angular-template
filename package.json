@@ -37,6 +37,7 @@
     "@capacitor/screen-orientation": "^7.0.0",
     "@capacitor/status-bar": "^7.0.0",
     "@ionic/angular": "^8.0.0",
+    "@primeng/themes": "^19.0.6",
     "@types/crypto-js": "^4.2.2",
     "@types/firebase": "^3.2.3",
     "animation.css": "^0.1.0",
@@ -44,6 +45,8 @@
     "crypto-js": "^4.2.0",
     "firebase": "^11.0.2",
     "ionicons": "^7.0.0",
+    "primeicons": "^7.0.0",
+    "primeng": "^19.0.6",
     "rxjs": "~7.8.0",
     "swiper": "^11.2.0",
     "tslib": "^2.3.0",
@@ -78,7 +81,8 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.4.2",
-    "typescript": "~5.7.3"
+    "typescript": "~5.7.3",
+    "vite": "^6.1.0"
   },
   "description": "An Ionic project"
 }
