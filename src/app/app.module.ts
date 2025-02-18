@@ -35,8 +35,8 @@ import { PipesModule } from './shared/pipes/pipes.module';
     provide: APP_INITIALIZER,
     useFactory: function (remoteConfig: FirebaseRemoteConfigService, firebase: FirebaseAppService) {
       async function asyncInitializer(): Promise<void> {
-        //await firebase.initializeFirebaseApp();// Initialize Firebase With Your Credentials
-        // await remoteConfig.loadConfig(); // Load Remote Config Values With Your Configurations
+        await firebase.initializeFirebaseApp();// Initialize Firebase With Your Credentials
+        await remoteConfig.loadConfig(); // Load Remote Config Values With Your Configurations
       }
       return asyncInitializer;
     },
