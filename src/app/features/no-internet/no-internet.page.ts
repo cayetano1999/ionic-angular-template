@@ -5,9 +5,10 @@ import { StatusBarHelper } from 'src/app/core/helpers/status-bar.helper';
 import { AlertControllerService } from 'src/app/core/services/ionic/alert-controller.service';
 
 @Component({
-  selector: 'app-no-internet',
-  templateUrl: './no-internet.page.html',
-  styleUrls: ['./no-internet.page.scss'],
+    selector: 'app-no-internet',
+    templateUrl: './no-internet.page.html',
+    styleUrls: ['./no-internet.page.scss'],
+    standalone: false
 })
 export class NoInternetPage {
 

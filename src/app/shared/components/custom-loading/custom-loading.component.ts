@@ -2,9 +2,10 @@ import { Component, inject, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-custom-loading',
-  templateUrl: './custom-loading.component.html',
-  styleUrls: ['./custom-loading.component.scss'],
+    selector: 'app-custom-loading',
+    templateUrl: './custom-loading.component.html',
+    styleUrls: ['./custom-loading.component.scss'],
+    standalone: false
 })
 export class CustomLoadingComponent   {
 
