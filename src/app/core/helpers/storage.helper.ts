@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Preferences } from '@capacitor/preferences';
-import { EncryptionHelper } from './encryption.helper';
+import { EncryptionHelper } from './Encryption.helper';
 import { StorageKeys } from '../enums/storage.keys.enum';
 
 

@@ -3,9 +3,10 @@ import { AppInBrowserService } from 'src/app/core/services/browser/app-in-browse
 import { remoteConfig } from 'src/environments/environment.remoteconfig';
 
 @Component({
-  selector: 'app-force-update-modal',
-  templateUrl: './force-update-modal.component.html',
-  styleUrls: ['./force-update-modal.component.scss'],
+    selector: 'app-force-update-modal',
+    templateUrl: './force-update-modal.component.html',
+    styleUrls: ['./force-update-modal.component.scss'],
+    standalone: false
 })
 export class ForceUpdateModalComponent {
 

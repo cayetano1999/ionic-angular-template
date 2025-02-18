@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'imageLoader',
+    name: 'imageLoader',
+    standalone: false
 })
 export class ImageLoaderPipe implements PipeTransform {
 

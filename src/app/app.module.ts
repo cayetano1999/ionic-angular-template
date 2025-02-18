@@ -13,6 +13,12 @@ import { FirebaseAnalyticsService } from './core/services/firebase/firebase-anal
 import { FirebaseRemoteConfigService } from './core/services/firebase/firebase-remote-config.service';
 import { FirebaseAppService } from './core/services/firebase/firebase.app.service';
 import { PipesModule } from './shared/pipes/pipes.module';
+
+import { ApplicationConfig } from '@angular/core';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeng/themes/aura';
+
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [AppComponent],
@@ -28,28 +34,36 @@ import { PipesModule } from './shared/pipes/pipes.module';
     AppRoutingModule,
     PipesModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+  providers: [
+  { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     HttpClient,
   {
     provide: APP_INITIALIZER,
     useFactory: function (remoteConfig: FirebaseRemoteConfigService, firebase: FirebaseAppService) {
       async function asyncInitializer(): Promise<void> {
-        //await firebase.initializeFirebaseApp();// Initialize Firebase With Your Credentials
-        // await remoteConfig.loadConfig(); // Load Remote Config Values With Your Configurations
+        await firebase.initializeFirebaseApp();// Initialize Firebase With Your Credentials
+        await remoteConfig.loadConfig(); // Load Remote Config Values With Your Configurations
       }
       return asyncInitializer;
     },
     deps: [FirebaseRemoteConfigService, FirebaseAppService],
     multi: true
   },
+ 
     ApiService,
     HttpClient,
     FirebaseAnalyticsService,
   provideHttpClient(
     withInterceptorsFromDi() // Si utilizas interceptores en tu aplicación
   ),
-  { provide: LOCALE_ID, useValue: 'es' }
+  { provide: LOCALE_ID, useValue: 'es' },
+  provideAnimationsAsync(),
+        providePrimeNG({
+            theme: {
+                preset: Aura
+            }
+        })
 
   ],
   bootstrap: [AppComponent],
